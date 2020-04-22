@@ -4,6 +4,9 @@ body {
     font-size: 30px;
 }
 
+body::-webkit-scrollbar { 
+    display: none; 
+}
 
 
 /* Body Header */
@@ -22,19 +25,16 @@ body {
 
 /* Horizontal Lists */
 
-
 .bars{
     color: white;
     margin: 0;
     margin-right: 5%;
     display: none;
-    float: right;
 }
 
 .bars i {
     font-size: 2rem;
 }
-
 
 .dropdown-list{
     margin: 0;
@@ -59,26 +59,22 @@ body {
     margin: 0.4rem 0px;
 }
 
-
-.dropdown-list li a{
-
-    color: white;
-    text-decoration: none;
-
-
+.no-list-style{
+    list-style: none;
 }
 
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
 
-
-.horizontal-list{
-
+.no-list-style li a{
     list-style: none;
-
-
+    color: white;
+    text-decoration: none;
 }
 
 .horizontal-list {
-    list-style: none;
     padding-left: 0px;
     margin: 0px;
 }
@@ -86,14 +82,8 @@ body {
 .horizontal-list li {
     display: inline-block;
     margin: 0px 8px 8px 0px;
-    font-weight: 100;
-    font-size: 0.9rem;
 }
 
-.horizontal-list li a {
-    color: white;
-    text-decoration: none;
-}
 
 .nav-menu li a {
     transition: color 0.5s, border-bottom 4s;
@@ -103,11 +93,6 @@ body {
     color: lightgrey;
     border-bottom: 1px solid black;
 }
-
-.text-center {
-    text-align: center;
-}
-
 
 
 /* Name and Social Icons*/
@@ -341,9 +326,8 @@ section:nth-child(2n + 1) {
     line-height: 20px;
 }
 
-.text-align-justify {
-    text-align: justify;
-}
+
+
 
 
 
@@ -381,26 +365,13 @@ section:nth-child(2n + 1) {
     color: transparent;
     text-align: center;
     padding: 10px;
-
-}
-
-.portfolio-details a{
-    text-decoration: none;
-
-    color: transparent;
-}
-
-
-.portfolio-image-container:hover .portfolio-details a  {
-    background-color: #80808078;
-    color: red;
 }
 
 .portfolio-image-container:hover {
     box-shadow: 0 0 20px #74ADC8;
 }
 
-.portfolio-image-container:hover .portfolio-details  {
+.portfolio-image-container:hover .portfolio-details {
     background-color: #80808078;
     color: white;
 }
@@ -520,7 +491,19 @@ button:focus {
     outline: none;
 }
 
+/* Common Text Align Classes */
 
+.text-right{
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
 
 /* Common Margin Classes */
 
@@ -545,7 +528,6 @@ button:focus {
     font-weight: 600;
 
 }
-
 
 
 /* setting background-color */
@@ -589,52 +571,60 @@ button:focus {
     width: 50%;
 }
 
-@media screen and (max-width: 600px)
-{
-    #body-header{
-  height: 65vh;
-}
-
- 
-
-}
-
-
-/*
-this secton is for navigation part*/
-
-
-
-
-
-
-
-
-@media screen and(max-width: 700px)
-{
-    nav{
-
-        display: flex;
-
-        flex-direction: column;
-    }
-
-    .horizontal-list li{
-
-        display: block;
-
-    }
-}
-
 
 @media only screen and (max-width: 572px) {
     
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+
     .bars {
         display: block;
     }
     
+    
     .nav-menu {
         display: none;
     } 
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .timeline-box {
+        width: 90%;
+        left: 10% !important;
+    }
+
+    .timeline-box::after {
+        left: -9.3% !important;
+    }
+
+    #timeline-divider {
+        top: 10%;
+        left: 2%;
+    }
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
 }
 
