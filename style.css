@@ -167,7 +167,7 @@ section:nth-child(2n + 1) {
     height: 12rem;
     width: 12rem;
     margin: auto;
-    margin-top: -17vh;
+    margin-top: -15vh;
 }
 
 #my-image img {
@@ -626,5 +626,16 @@ button:focus {
         margin: 10%;
     }
 
+}
+
+#credit{
+
+  /*  height: 30px;*/
+
+    width: 100%;
+
+    background-color: black;
+    text-align: center;
+    color:cyan;
 }
 
